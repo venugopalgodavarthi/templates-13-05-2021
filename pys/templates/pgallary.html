@@ -1,0 +1,80 @@
+{%extends 'home.html'%}
+{%block title%}
+<title>gallary</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+
+header {
+  background-color: rgb(233, 20, 20);
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: rgb(150, 82, 108);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #208fb1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(141, 143, 20);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+{%endblock%}
+{% block content%}
+<article>
+    <h1>pyspider</h1>
+    <h1>gallary content</h1>
+
+    <p>The block of code which we wanted to override will be return inside the block jinja
+        tag. Anything which is return inside the block jinja tag can be override in the child html file
+        by repeating the creating the same block with the block and with the diff content..</p>
+</article>
+{%endblock%}
